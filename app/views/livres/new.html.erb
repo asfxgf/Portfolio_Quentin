@@ -1,0 +1,16 @@
+<%= form_for @livre do |f| %>
+
+  <%= f.label :title, "Entrez le titre" %>
+  <%= f.text_field :title %>
+
+  <%= f.label :author, "Entrez le nom de l'auteur" %>
+  <%= f.text_field :author %>
+
+  <%= f.label :url, "Entrez l'url amazon" %>
+  <%= f.text_field :url %>
+
+  <%= f.label :description, "Entrez vôtre description" %>
+  <%= f.text_field :description %>
+
+  <%= f.submit %>
+<% end %>

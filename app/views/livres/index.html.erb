@@ -1,0 +1,14 @@
+<h1>Les livres index</h1>
+
+<p><%= link_to "Ajouter un livre a la bibliothèque", new_livre_path %></p>
+
+<ul>
+  <% @livres.each do |livre| %>
+    <li>
+      <h2><%= livre.title %></h2>
+      <h3>De <%= livre.author %></h3>
+      <p><%= link_to "plus d'infos", livre_path(livre) %></p>
+      <p><%= link_to "DELETE", livre_path(livre), method: :delete, data: {confirm: "Etes-vous sûr ?"} %></p>
+    </li>
+  <% end %>
+</ul>

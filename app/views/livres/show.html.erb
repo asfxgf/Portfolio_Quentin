@@ -1,0 +1,8 @@
+<h2><a target="_blank" href="<%= @livre.url %>"><%= @livre.title %></a></h2>
+<p>De <%= @livre.author %></p>
+<%= @livre.picture %>
+<h4>Description : <%= @livre.description %></h4>
+<p><a target="_blank" href="<%= @livre.url %>">Acheter <%= @livre.title %> sur Amazon</a></p>
+<p><a HREF="mailto:deleglise.quentin@hotmail.fr">Emprunter ce livre sur Paris</a></p>
+<!-- Voir plus tard pour insérer un lien pour le prêts etc... -->
+<%= link_to "Retour à la bibliothèque", livres_path %>
