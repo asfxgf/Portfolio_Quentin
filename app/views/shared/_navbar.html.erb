@@ -10,13 +10,14 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <%= link_to "Ma vision", convictions_path, class: "nav-link" %>
+      <%= link_to "Mes compétences", competences_path, class: "nav-link" %>
+      <%= link_to "Projets", projets_path, class: "nav-link" %>
+      <%= link_to "Articles", articles_path, class: "nav-link" %>
+      <%= link_to "Videos", videos_path, class: "nav-link" %>
+      <%= link_to "Ressources", ressources_path, class: "nav-link" %>
+      <%= link_to "Bibliothèque", livres_path, class: "nav-link" %>
       <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
