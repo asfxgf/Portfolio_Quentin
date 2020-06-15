@@ -9,6 +9,8 @@
       <h3>De <%= livre.author %></h3>
       <p><%= link_to "plus d'infos", livre_path(livre) %></p>
       <p><%= link_to "DELETE", livre_path(livre), method: :delete, data: {confirm: "Etes-vous sûr ?"} %></p>
+      <p><%= link_to "EDIT", edit_livre_path(livre) %></p>
+
     </li>
   <% end %>
 </ul>
