@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :livres
+  resources :articles
   get "convictions", to: "pages#convictions"
   get "competences", to: "pages#competences"
   get "ressources", to: "pages#ressources"

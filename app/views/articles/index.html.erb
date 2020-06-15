@@ -1,0 +1,17 @@
+<h1>Les articles index</h1>
+
+<p><%= link_to "Ajouter un article", new_article_path %></p>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <a target=_blank href="<%= article.url %>">
+        <h2><%= article.title %></h2>
+        <p><%= article.description %></p>
+        <p><%= link_to "DELETE", article_path(article), method: :delete, data: {confirm: "Etes-vous sûr ?"} %></p>
+        <p><%= link_to "EDIT", edit_article_path(article) %></p>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Retour Accueil", root_path %></p>

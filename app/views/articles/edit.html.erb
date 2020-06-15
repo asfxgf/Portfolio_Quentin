@@ -1,0 +1,13 @@
+<%= form_for @article do |f| %>
+
+  <%= f.label :title, "Entrer le titre" %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description, "Entrer la description" %>
+  <%= f.text_field :description %>
+
+    <%= f.label :url, "Entrer la description" %>
+  <%= f.text_field :url %>
+
+  <%= f.submit %>
+<% end %>
