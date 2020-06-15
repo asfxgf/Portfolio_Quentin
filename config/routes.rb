@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :livres
   resources :articles
+  resources :videos
   get "convictions", to: "pages#convictions"
   get "competences", to: "pages#competences"
   get "ressources", to: "pages#ressources"

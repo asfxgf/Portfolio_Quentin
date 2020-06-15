@@ -1,0 +1,17 @@
+<h1>Les videos index</h1>
+
+<p><%= link_to "Ajouter une vidéo", new_video_path %></p>
+<ul>
+  <% @videos.each do |video| %>
+    <li>
+      <a target=_blank href="<%= video.url %>">
+        <h2><%= video.title %></h2>
+        <p><%= video.description %></p>
+        <p><%= link_to "DELETE", video_path(video), method: :delete, data: {confirm: "Etes-vous sûr ?"} %></p>
+        <p><%= link_to "EDIT", edit_video_path(video) %></p>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Retour Accueil", root_path %></p>

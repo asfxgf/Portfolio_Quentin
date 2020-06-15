@@ -1,0 +1,13 @@
+<%= form_for @video do |f| %>
+
+  <%= f.label :title, "Entrez le titre" %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description, "Entrez une description" %>
+  <%= f.text_field :description %>
+
+  <%= f.label :url, "Entrez l'url youtube" %>
+  <%= f.text_field :url %>
+
+  <%= f.submit %>
+<% end %>
