@@ -2,7 +2,7 @@
 
 <%= link_to "Ajouter un article", new_article_path, class: "btn btn-flat" %>
 <% @articles.each do |article| %>
-<!-- <a target=_blank href="<%= article.url %>">  Ici ca fait sauter le design + fonctionne que sur le texte !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+<a target=_blank href="<%= article.url %>">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) , url(<%= article.picture %>)">
     <div class="row">
       <div class="col-sm-12 text-center">
@@ -11,17 +11,9 @@
       <div class="col-sm-12 text-center">
         <p class="description"><%= article.description %></p>
       </div>
-      <div class="w-100"></div>
-
-      <div class="col-sm-6 text-center margin">
-        <p><%= link_to "DELETE", article_path(article), method: :delete, data: {confirm: "Etes-vous sûr ?"} %></p>
-      </div>
-      <div class="col-sm-6 text-center">
-        <p><%= link_to "EDIT", edit_article_path(article) %></p>
-      </div>
     </div>
   </div>
-<!-- </a> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+</a>
 <% end %>
 
 
