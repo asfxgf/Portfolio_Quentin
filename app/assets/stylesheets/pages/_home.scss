@@ -98,7 +98,7 @@ $bodyFont: 'Open Sans', sans-serif;
   overflow: hidden;
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0s;
 
   .cardss-image {
     position: absolute;
@@ -108,7 +108,7 @@ $bodyFont: 'Open Sans', sans-serif;
     height: 100%;
     z-index: 2;
     background-color: #000;
-    transition: .5s;
+    transition: 0s;
   }
 
   &:hover img {
