@@ -2,16 +2,26 @@
 
 <%= link_to "Ajouter un projet", new_projet_path, class: "btn btn-flat" %>
 
-  <% @projets.each do |projet| %>
-  <div class="container">
-    <div class="card text-center" style="width: 18rem;">
-      <img class="card-img-top" src="<%= projet.picture %>" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"><%=projet.title %></h5>
-        <p class="card-text"><%= projet.description %></p>
-        <a target="_blank" href="<%=projet.url %>" class="btn btn-primary">Voir le projet</a>
-      </div>
+
+<div class="container">
+  <h1>Les projets index</h1>
+  <%= link_to "Ajouter un projet", new_projet_path, class: "btn btn-flat" %>
+</div>
+<div class="container">
+<% @projets.each do |projet| %>
+<a target="_blank" href="<%= projet.url %>">
+<div class="card-trip">
+  <img src="<%= projet.picture %>" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= projet.title %></h2>
+      <p><%= projet.description %></p>
     </div>
   </div>
-  <% end %>
+</div>
+</a>
+<% end %>
+
 <p><%= link_to "Retour Accueil", root_path %></p>
+</div>
+
