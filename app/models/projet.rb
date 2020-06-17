@@ -1,4 +1,4 @@
-class Article < ApplicationRecord
+class Projet < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :url, presence: true

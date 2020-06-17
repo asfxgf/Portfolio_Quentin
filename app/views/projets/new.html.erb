@@ -1,6 +1,6 @@
-<h1>Créer ton nouvel article !</h1>
+<h1>Créer ton nouveau projet !</h1>
 
-<%= form_for @article do |f| %>
+<%= form_for @projet do |f| %>
 
   <%= f.label :title, "Entrez le titre" %>
   <%= f.text_field :title %>
@@ -8,10 +8,10 @@
   <%= f.label :description, "Entrez une description" %>
   <%= f.text_field :description %>
 
-  <%= f.label :url, "Entrez l'url medium" %>
+  <%= f.label :url, "Entrez l'url du site / projet" %>
   <%= f.text_field :url %>
 
-  <%= f.label :picture, "Entrez l'url de la photo" %>
+  <%= f.label :picture, "Entrez l'url d'une illustration du projet" %>
   <%= f.text_field :picture %>
 
   <%= f.submit %>

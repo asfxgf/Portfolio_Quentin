@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :livres
   resources :articles
   resources :videos
+  resources :projets
   get "convictions", to: "pages#convictions"
   get "competences", to: "pages#competences"
   get "ressources", to: "pages#ressources"
