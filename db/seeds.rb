@@ -6,4 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Debut de seed"
+
+AdminUser.create!(email: 'admind@example.com', password: 'passwordd', password_confirmation: 'passwordd') if Rails.env.development?
+
 puts "fin de seed"
