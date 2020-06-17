@@ -1,22 +1,22 @@
 <div class="container">
   <h1>Les articles index</h1>
-<%= link_to "Ajouter un article", new_article_path, class: "btn btn-flat" %>
-
+  <%= link_to "Ajouter un article", new_article_path, class: "btn btn-flat" %>
+</div>
+<div class="container">
 <% @articles.each do |article| %>
-<a target=_blank href="<%= article.url %>">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) , url(<%= article.picture %>)">
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <h2 class="title"><%= article.title %></h2>
-      </div>
-      <div class="col-sm-12 text-center">
-        <p class="description"><%= article.description %></p>
-      </div>
+<a target="_blank" href="<%= article.url %>">
+<div class="card-trip">
+  <img src="<%= article.picture %>" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= article.title %></h2>
+      <p><%= article.description %></p>
     </div>
   </div>
+</div>
 </a>
 <% end %>
 
-
 <p><%= link_to "Retour Accueil", root_path %></p>
 </div>
+
