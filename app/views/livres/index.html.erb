@@ -1,16 +1,23 @@
+<div class="container">
 <h1>Les livres index</h1>
+<%= link_to "Ajouter un livre à la bibliothèque", new_livre_path, class: "btn btn-flat" %>
 
-<p><%= link_to "Ajouter un livre a la bibliothèque", new_livre_path %></p>
+
+
 <ul>
-  <% @livres.each do |livre| %>
-    <li>
-      <h2><%= livre.title %></h2>
-      <h3>De <%= livre.author %></h3>
-      <p><%= link_to "plus d'infos", livre_path(livre) %></p>
-      <p><%= link_to "DELETE", livre_path(livre), method: :delete, data: {confirm: "Etes-vous sûr ?"} %></p>
-      <p><%= link_to "EDIT", edit_livre_path(livre) %></p>
-    </li>
-  <% end %>
+  <div class="row">
+    <%@livres.each do |livre| %>
+        <li>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="<%= livre.picture %>" alt="Card image cap">
+            <div class="card-body">
+             <h5 class="card-title"><%= livre.title %></h5>
+              <p class="card-text"><%= livre.description %></p>
+              <a target="_blank" href="<%= livre.url %>" class="btn btn-success">plus d'infos</a>
+           </div>
+         </div>
+       </li>
+   <% end %>
+  </div>
 </ul>
-
-<p><%= link_to "Retour Accueil", root_path %></p>
+<!-- ne pas oublie le lien -->

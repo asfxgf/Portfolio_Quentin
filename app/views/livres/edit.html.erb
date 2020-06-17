@@ -3,11 +3,17 @@
   <%= f.label :title, "Entrer le titre" %>
   <%= f.text_field :title %>
 
+  <%= f.label :description, "Entrer le résumé du livre" %>
+  <%= f.text_field :description %>
+
   <%= f.label :author, "Entrer le nom de l'auteur" %>
   <%= f.text_field :author %>
 
   <%= f.label :url, "Entrer l'url amazon" %>
   <%= f.text_field :url %>
+
+  <%= f.label :picture, "Entrer l'url de la photo" %>
+  <%= f.text_field :picture %>
 
   <%= f.submit %>
 <% end %>
