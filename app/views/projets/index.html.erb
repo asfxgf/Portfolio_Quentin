@@ -2,43 +2,16 @@
 
 <%= link_to "Ajouter un projet", new_projet_path, class: "btn btn-flat" %>
 
-
-<% @projets.each do |projet| %>
-<div class="card text-center" style="width: 18rem;">
-  <img class="card-img-top" src="<%= projet.picture %>" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"><%=projet.title %></h5>
-    <p class="card-text"><%= projet.description %></p>
-    <a target="_blank" href="<%=projet.url %>" class="btn btn-primary">Voir le projet</a>
-  </div>
-</div>
-<% end %>
-
-
-
-
-<% @projets.each do |projet| %>
-<a target=_blank href="<%= projet.url %>">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) , url(<%= projet.picture %>)">
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <h2 class="title"><%= projet.title %></h2>
-      </div>
-      <div class="col-sm-12 text-center">
-        <p class="description"><%= projet.description %></p>
-      </div>
-      <div class="w-100"></div>
-
-      <div class="col-sm-6 text-center margin">
-        <p><%= link_to "DELETE", projet_path(projet), method: :delete, data: {confirm: "Etes-vous sûr ?"} %></p>
-      </div>
-      <div class="col-sm-6 text-center">
-        <p><%= link_to "EDIT", edit_projet_path(projet) %></p>
+  <% @projets.each do |projet| %>
+  <div class="container">
+    <div class="card text-center" style="width: 18rem;">
+      <img class="card-img-top" src="<%= projet.picture %>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%=projet.title %></h5>
+        <p class="card-text"><%= projet.description %></p>
+        <a target="_blank" href="<%=projet.url %>" class="btn btn-primary">Voir le projet</a>
       </div>
     </div>
   </div>
-</a>
-<% end %>
-
-
+  <% end %>
 <p><%= link_to "Retour Accueil", root_path %></p>
