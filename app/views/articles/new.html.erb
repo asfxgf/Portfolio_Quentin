@@ -1,3 +1,5 @@
+Créer ton nouvel article !
+
 <%= form_for @article do |f| %>
 
   <%= f.label :title, "Entrez le titre" %>
@@ -8,6 +10,9 @@
 
   <%= f.label :url, "Entrez l'url medium" %>
   <%= f.text_field :url %>
+
+  <%= f.label :picture, "Entrez l'url de la photo" %>
+  <%= f.text_field :picture %>
 
   <%= f.submit %>
 <% end %>
