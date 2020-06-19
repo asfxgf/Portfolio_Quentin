@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   def index
     # @articles = Article.all
     @articles = policy_scope(Article)
+    skip_pundit?
   end
 
   def show
@@ -28,7 +29,6 @@ class ArticlesController < ApplicationController
   def update
     @article.update(article_params)
     redirect_to articles_path
-    authorize @article
   end
 
   def destroy

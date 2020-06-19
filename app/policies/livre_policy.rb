@@ -1,12 +1,12 @@
-class ArticlePolicy < ApplicationPolicy
+class LivrePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all # index de tous les articles
+      scope.all
     end
   end
 
   def create?
-    admin? # seul les admins peuvent creer un article
+    admin? # tous les users peuvent creer un restaurant
   end
 
   def show?
@@ -20,7 +20,7 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def destroy?
-    user_is_owner_or_admin? # Seul le owner ou un admin peux destroy ses articles
+  user_is_owner_or_admin? # Seul le owner ou un admin peux destroy ses articles
   end
 
   private
