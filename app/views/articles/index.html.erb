@@ -1,7 +1,13 @@
 <div class="container">
   <h1>Les articles index</h1>
+  <% if policy(Article).create? %>
   <%= link_to "Ajouter un article", new_article_path, class: "btn btn-flat" %>
+<% end %>
 </div>
+
+
+
+
 <div class="container">
 <% @articles.each do |article| %>
 <a target="_blank" href="<%= article.url %>">
@@ -11,6 +17,13 @@
     <div>
       <h2><%= article.title %></h2>
       <p><%= article.description %></p>
+      <% if policy(article).edit? %>
+      <p><%= link_to 'Edit', edit_article_path(article) %></p>
+      <% end %>
+      <% if policy(article).edit? %>
+      <p><%= link_to 'Destroy', article, method: :delete, data: { confirm: "Are you sure?" } %>
+      <% end %>
+      </p>
     </div>
   </div>
 </div>
@@ -19,4 +32,3 @@
 
 <p><%= link_to "Retour Accueil", root_path %></p>
 </div>
-
