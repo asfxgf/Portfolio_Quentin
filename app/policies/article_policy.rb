@@ -26,10 +26,10 @@ class ArticlePolicy < ApplicationPolicy
   private
 
   def user_is_owner_or_admin?
-    user.admin || record.user == user
+    user&.admin || record.user == user
   end
 
   def admin?
-    user.admin
+    user&.admin
   end
 end
