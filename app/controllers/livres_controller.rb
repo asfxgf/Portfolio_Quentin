@@ -1,7 +1,6 @@
 class LivresController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_livre, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     # @livres = Livre.all
@@ -17,7 +16,8 @@ class LivresController < ApplicationController
   end
 
   def create
-    Livre.create(livre_params)
+    @livre = current_user.livres.build(livre_params)
+    @livre.save
     redirect_to livres_path
     authorize @livre
   end
