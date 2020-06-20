@@ -28,19 +28,18 @@ class LivresController < ApplicationController
   def update
     @livre.update(livre_params)
     redirect_to livres_path
-    authorize @livre
   end
 
   def destroy
     @livre.destroy
     redirect_to livres_path
-    authorize @livre
   end
 
   private
 
   def set_livre
     @livre = Livre.find(params[:id])
+    authorize @livre
   end
 
   def livre_params

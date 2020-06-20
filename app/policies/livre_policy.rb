@@ -6,7 +6,7 @@ class LivrePolicy < ApplicationPolicy
   end
 
   def create?
-    admin? # tous les users peuvent creer un restaurant
+    admin? # seul les admins peuvent creer un livre
   end
 
   def show?
@@ -20,16 +20,16 @@ class LivrePolicy < ApplicationPolicy
   end
 
   def destroy?
-  user_is_owner_or_admin? # Seul le owner ou un admin peux destroy ses articles
+    user_is_owner_or_admin? # Seul le owner ou un admin peux destroy ses articles
   end
 
   private
 
   def user_is_owner_or_admin?
-    user.admin || record.user == user
+    user&.admin || record.user == user
   end
 
   def admin?
-    user.admin
+    user&.admin
   end
 end
