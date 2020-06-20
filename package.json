@@ -1,5 +1,5 @@
 {
-  "name": "Porfolio_Quentin",
+  "name": "Portfolio_Quentin",
   "private": true,
   "dependencies": {
     "@rails/webpacker": "5.1.1",

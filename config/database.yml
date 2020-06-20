@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: Porfolio_Quentin_development
+  database: Portfolio_Quentin_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: Porfolio_Quentin
+  #username: Portfolio_Quentin
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Porfolio_Quentin_test
+  database: Portfolio_Quentin_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: Porfolio_Quentin_production
-  username: Porfolio_Quentin
-  password: <%= ENV['PORFOLIO_QUENTIN_DATABASE_PASSWORD'] %>
+  database: Portfolio_Quentin_production
+  username: Portfolio_Quentin
+  password: <%= ENV['PORTFOLIO_QUENTIN_DATABASE_PASSWORD'] %>
