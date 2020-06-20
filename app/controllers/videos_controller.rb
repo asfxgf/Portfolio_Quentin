@@ -1,40 +1,46 @@
 class VideosController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_video, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @videos = Video.all
+    # @videos = Video.all
+    @videos = policy_scope(Video)
   end
 
   def show
-    @videos = Video.find(params[:id])
   end
 
   def new
     @video = Video.new
+    authorize @video
   end
 
   def create
-    Video.create(video_params)
+    @video = current_user.videos.build(video_params)
+    @video.save
     redirect_to videos_path
+    authorize @video
   end
 
   def edit
-    @video = Video.find(params[:id])
   end
 
   def update
-    @video = Video.find(params[:id])
     @video.update(video_params)
     redirect_to videos_path
   end
 
   def destroy
-    @video = Video.find(params[:id])
     @video.destroy
     redirect_to videos_path
   end
 
   private
+
+  def set_video
+    @videos = Video.find(params[:id])
+    authorize @video
+  end
 
   def video_params
     params.require(:video).permit(:title, :url, :description, :picture)

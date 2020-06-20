@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :articles
   has_many :livres
+  has_many :videos
+  has_many :projets
 end

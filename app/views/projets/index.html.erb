@@ -1,6 +1,8 @@
 <div class="container">
   <h1>Les projets index</h1>
-  <%= link_to "Ajouter un projet", new_projet_path, class: "btn btn-flat" %>
+  <% if policy(Article).create? %>
+    <%= link_to "Ajouter un projet", new_projet_path, class: "btn btn-flat" %>
+  <% end %>
 </div>
 <div class="container">
 <% @projets.each do |projet| %>

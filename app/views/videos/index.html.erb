@@ -1,7 +1,12 @@
 <div class="container">
   <h1>Les videos index</h1>
-  <%= link_to "Ajouter une vidéo", new_video_path, class: "btn btn-flat" %>
+  <% if policy(Article).create? %>
+    <%= link_to "Ajouter une vidéo", new_video_path, class: "btn btn-flat" %>
+  <% end %>
 </div>
+
+
+
 <div class="container">
 <% @videos.each do |video| %>
 <a target="_blank" href="<%= video.url %>">
