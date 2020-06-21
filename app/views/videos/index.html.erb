@@ -22,5 +22,21 @@
 </a>
 <% end %>
 
+
+
+<div class="container">
+  <% @videos.each do |video| %>
+      <div class="embed-responsive embed-responsive-21by9">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/<%= video.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+    <% end %>
+</div>
+
+
+
+
+
+
 <p><%= link_to "Retour Accueil", root_path %></p>
 </div>
