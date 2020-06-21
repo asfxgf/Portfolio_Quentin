@@ -45,6 +45,12 @@
         <p><%= video.description %></p>
         <footer class="blockquote-footer">Love this <br><cite title="Source Title"> Ajouté par : <%= video.user.email %></cite></footer>
       </blockquote>
+            <% if policy(video).edit? %>
+        <p><%= link_to 'Edit', edit_video_path(video) %></p>
+      <% end %>
+      <% if policy(video).edit? %>
+        <p><%= link_to 'Destroy', video, method: :delete, data: { confirm: "Are you sure?" } %>
+      <% end %>
     </div>
   </div>
   <% end %>
