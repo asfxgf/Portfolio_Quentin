@@ -8,18 +8,25 @@
 <ul>
   <div class="row">
     <%@livres.each do |livre| %>
-        <li>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<%= livre.picture %>" alt="Card image cap">
-            <div class="card-body">
-             <h5 class="card-title"><%= livre.title %></h5>
-             <h6 class="card-title"><u>De <%= livre.author %></u></h6>
-              <p class="card-text"><%= livre.description %></p>
-              <a target="_blank" href="<%= livre.url %>" class="btn btn-success">plus d'infos</a>
-           </div>
-         </div>
-       </li>
-   <% end %>
+      <li>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="<%= livre.picture %>" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= livre.title %></h5>
+            <h6 class="card-title"><u>De <%= livre.author %></u></h6>
+            <p class="card-text"><%= livre.description %></p>
+            <a target="_blank" href="<%= livre.url %>" class="btn btn-success">plus d'infos
+            </a>
+            <% if policy(livre).edit? %>
+              <p><%= link_to 'Edit', edit_livre_path(livre) %></p>
+            <% end %>
+            <% if policy(livre).edit? %>
+              <p><%= link_to 'Destroy', livre, method: :delete, data: { confirm: "Are you sure?" } %>
+            <% end %>
+          </div>
+        </div>
+      </li>
+    <% end %>
   </div>
 </ul>
 <!-- ne pas oublie le lien -->
