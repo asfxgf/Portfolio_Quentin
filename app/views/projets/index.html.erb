@@ -13,6 +13,12 @@
     <div>
       <h2><%= projet.title %></h2>
       <p><%= projet.description %></p>
+      <% if policy(projet).edit? %>
+        <p><%= link_to 'Edit', edit_projet_path(projet) %></p>
+      <% end %>
+      <% if policy(projet).edit? %>
+        <p><%= link_to 'Destroy', projet, method: :delete, data: { confirm: "Are you sure?" } %>
+      <% end %>
     </div>
   </div>
 </div>

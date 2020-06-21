@@ -1,5 +1,5 @@
 class ProjetsController < ApplicationController
-  before_action :set_projets, only: [:show, :edit, :update, :destroy]
+  before_action :set_projet, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
@@ -38,8 +38,8 @@ class ProjetsController < ApplicationController
   private
 
   def set_projet
-    @projets = Projet.find(params[:id])
-    authorize projet
+    @projet = Projet.find(params[:id])
+    authorize @projet
   end
 
   def projet_params
