@@ -1,36 +1,26 @@
 <div class="container">
   <h1>Les videos index</h1>
-  <% if policy(Article).create? %>
+  <% if policy(Video).create? %>
     <%= link_to "Ajouter une vidéo", new_video_path, class: "btn btn-flat" %>
   <% end %>
 </div>
 
 
 
-<div class="container">
-<% @videos.each do |video| %>
-<a target="_blank" href="<%= video.url %>">
-<div class="card-trip">
-  <img src="<%= video.picture %>" />
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= video.title %></h2>
-      <p><%= video.description %></p>
-    </div>
-  </div>
-</div>
-</a>
-<% end %>
-
-
 
 <div class="container">
   <% @videos.each do |video| %>
-      <div class="embed-responsive embed-responsive-21by9">
-        <iframe width="1280" height="720" src="https://www.youtube.com/embed/<%= video.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
-      </div>
+    <div class="embed-responsive embed-responsive-21by9">
+      <iframe width="1280" height="720" src="https://www.youtube.com/embed/<%= video.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </div>
+    <% if policy(video).edit? %>
+      <p><%= link_to 'Edit', edit_video_path(video) %></p>
     <% end %>
+    <% if policy(video).edit? %>
+      <p><%= link_to 'Destroy', video, method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
+  <% end %>
 </div>
 
 

@@ -38,7 +38,7 @@ class VideosController < ApplicationController
   private
 
   def set_video
-    @videos = Video.find(params[:id])
+    @video = Video.find(params[:id])
     authorize @video
   end
 
