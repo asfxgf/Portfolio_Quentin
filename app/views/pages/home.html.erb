@@ -261,22 +261,15 @@ Quentin DELEGLISE
      <li><h3><%= link_to "Mes vidéos", videos_path %></h3></li>
     </ul>
   </div>
-  <!-- Barre range -->
-  <div class="container">
-    <div class="range-wrap">
-      <div class="range-value" id="rangeV"></div>
-      <input id="range" type="range" min="200" max="800" value="200" step="1">
-    </div>
-  </div>
   <!-- NOUVEAU FORM CALCUL -->
-<div class="container">
-  <form>
-  <div class="form-row align-items-center">
-    <div class="col-sm-6">
-      <h4 class="text-center">Insérez vôtre CA :</h4>
-      <label class="sr-only" for="inlineFormInputGroup">CA</label>
-      <div class="input-group mb-2">
-        <input type="text" class="form-control text-center" id="ca" placeholder="Insérez votre CA" onChange="computeGains();" value="0">
+  <div class="container">
+    <form>
+      <div class="form-row align-items-center">
+      <div class="col-sm-6">
+        <h4 class="text-center">Insérez vôtre CA :</h4>
+        <label class="sr-only" for="inlineFormInputGroup">CA</label>
+        <div class="input-group mb-2">
+          <input type="text" class="form-control text-center" id="ca" placeholder="Insérez votre CA" onChange="computeGains();" value="0">
         <div class="input-group-prepend">
         <div class="input-group-text">€</div>
         </div>
