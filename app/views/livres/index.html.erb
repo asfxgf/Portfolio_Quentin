@@ -1,12 +1,10 @@
 <div class="container">
-<h1>Binvenue dans ma bibliothèque</h1>
-  <% if policy(Livre).create? %>
-  <%= link_to "Ajouter un livre à la bibliothèque", new_livre_path, class: "btn btn-flat" %>
-<% end %>
-
-
-<ul>
-  <div class="row">
+  <h1>Binvenue dans ma bibliothèque</h1>
+    <% if policy(Livre).create? %>
+      <%= link_to "Ajouter un livre à la bibliothèque", new_livre_path, class: "btn btn-flat" %>
+    <% end %>
+  <ul>
+   <div class="row">
     <%@livres.each do |livre| %>
       <li>
         <div class="card" style="width: 18rem;">
@@ -22,11 +20,12 @@
             <% end %>
             <% if policy(livre).edit? %>
               <p><%= link_to 'Destroy', livre, method: :delete, data: { confirm: "Are you sure?" } %>
+              </p>
             <% end %>
           </div>
         </div>
       </li>
     <% end %>
-  </div>
-</ul>
-<!-- ne pas oublie le lien -->
+   </div>
+ </ul>
+</div>
