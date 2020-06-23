@@ -1,8 +1,22 @@
-<div>
-  <h1>Ici c'est la prehome mamene</h1>
-  <div class="video-container">
-    <video autoplay="autoplay" muted="muted">
-      <source src="https://res.cloudinary.com/asfxgf/video/upload/v1592255533/intro_getl5m.mp4" type="video/mp4" />
-    </video>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PortfolioQuentin</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= favicon_link_tag asset_path('logonavbar.png') %>
+  </head>
+
+  <body>
+    <div class="video-container">
+      <video autoplay="autoplay" muted="muted">
+        <source src="https://res.cloudinary.com/asfxgf/video/upload/v1592255533/intro_getl5m.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <%= yield %>
+  </body>
+</html>

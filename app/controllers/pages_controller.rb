@@ -4,6 +4,10 @@ class PagesController < ApplicationController
   def home
   end
 
+  def prehome
+    render :layout => false
+  end
+
   def convictions
   end
 
