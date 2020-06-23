@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   get "bibliotheque", to: "pages#bibliotheque"
   get "articles", to: "pages#articles"
   get "videos", to: "pages#videos"
+  get "prehome", to: "pages#prehome"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
