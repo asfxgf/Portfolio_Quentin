@@ -21,3 +21,26 @@
   left: 50%;
   transform: translate(-50%,-50%);
 }
+.linktohome a {
+    color: #e5b180;
+    font-family: "Roboto";
+    font-size: 20px;
+    height: 24px;
+    display: block;
+    right: 12px;
+    top: 0;
+    text-decoration: underline;
+    position: absolute;
+    z-index: 300;
+    padding: 6px 12px;
+    text-shadow: 0 0 2px #222;
+
+    &:hover {
+    color: #ffffff;
+  }
+
+}
+
+.linktohome p {
+    color: #ff3b80;
+}
