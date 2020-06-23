@@ -26,7 +26,9 @@ a {
 #green {
   color: #54DD88;
 }
-
+#writter {
+  color: #54DD88;
+}
 .competences {
 
 }
@@ -40,6 +42,13 @@ abbr {
   font-style: italic;
   font-weight: 100;
 }
+/**** progress bar *****/
+
+.allprogressbar {
+  margin-top: 50px;
+}
+
+
 
 /**** Sass Variables *****************************************************/
 $bodyFont: 'Open Sans', sans-serif;
