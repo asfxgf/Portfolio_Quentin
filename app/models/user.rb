@@ -2,13 +2,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   devise :omniauthable, omniauth_providers: [:linkedin]
-
   has_many :articles
   has_many :livres
   has_many :videos
   has_many :projets
+end
 
-  def self.find_for_linkedin_oauth(auth)
+ def self.find_for_linkedin_oauth(auth)
   user_params = auth.slice("provider", "uid")
   user_params.merge! auth.info.slice("email", "first_name", "last_name")
   user_params[:linkedin_picture_url] = auth.info.image
@@ -26,4 +26,3 @@ class User < ApplicationRecord
   end
   return user
   end
-end
