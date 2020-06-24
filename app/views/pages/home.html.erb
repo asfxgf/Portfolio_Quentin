@@ -165,6 +165,9 @@ Quentin DELEGLISE
   </div>
 </div>
   <!-- Partie Compétences -->
+  <div class="container text-center">
+    <h2 id="green">Qui suis-je ?</h2>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-">
@@ -226,7 +229,7 @@ Quentin DELEGLISE
             <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">70%
             </div>
           </div>
-          <h4>Programmation (back) :</h4>
+          <h4>Programmation back :</h4>
           <div class="progress">
             <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">60%
             </div>
@@ -236,7 +239,7 @@ Quentin DELEGLISE
             <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">55%
             </div>
           </div>
-          <h4>Programmation (front) :</h4>
+          <h4>Programmation front :</h4>
           <div class="progress">
             <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 35%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">35%
             </div>
@@ -251,11 +254,13 @@ Quentin DELEGLISE
     </div>
   </div>
   <div class="container">
-    <h4>Mi-entrepreneur mi-développeur mi-marketeur, j'apporte mon expertise au service des entreprises qui souhaitent <b>digitaliser leur business</b>. La complémentarité de <b>mes études</b> mêlée à ma <b>passion</b> pour le <b>growth-hacking</b> et la <b>gestion de projets</b> me permet d'offrir des <b>solutions optimales</b>.
+    <h4>Mi-entrepreneur mi-développeur mi-marketeur, j'apporte mon expertise au service des entreprises qui souhaitent <b>digitaliser leur business</b>.<br>La complémentarité de <b>mes études</b> mêlée à ma <b>passion</b> pour le <b>growth-hacking</b> et la <b>gestion de projets</b> me permet d'offrir des <b>solutions optimales</b>.
     </h4>
   </div>
-  <div class="container">
-    <h3 id="visions">Ma façon de voir les choses :</h3>
+  <div class="container text-center" id="green">
+    <h2>Ma vision des choses :</h2>
+  </div>
+  <div class="container text">
     <div class="row">
       <div class="col-sm-4 text-center">
         <img src="https://res.cloudinary.com/asfxgf/image/upload/v1592268524/samples/yeux_dmquy4.webp" alt="">
@@ -267,6 +272,9 @@ Quentin DELEGLISE
         </p>
       </div>
     </div>
+  </div>
+  <div class="container text-center" id="green">
+    <h2>Mes Etudes</h2>
   </div>
   <div class="container">
     <div class="row">
@@ -295,23 +303,28 @@ Quentin DELEGLISE
       </ul>
     </div>
   </div>
-  <div class="container">
-    <h3>Vous êtes entrepreneur ou travaillez dans une TPE/PME ?<br><a target="blank" href="https://www.linkedin.com/in/quentin-deleglise-7a4459131/"> Discutons de vos problématiques (mon analyse et conseils sont gratuits).</a></h3>
+  <div class="container text-center">
+    <h3 id="green">Tu es entrepreneur ou travaille dans une TPE/PME ?</h3>
+    <!-- Début de widget de lien Calendly -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+<a class="btn btn-flat" href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quentin-deleglise'});return false;">Discutons de vos problématiques</a>
+<!-- Fin de widget de lien Calendly -->
   <!--Mettre un emoji love / message-->
     </p>
   </div>
   <div class="container col-sm-6 text-center">
-    <h3>Envie d'en savoir plus sur moi ?</h3>
+    <h3 id="green">Envie d'en savoir plus sur moi ?</h3>
     <ul>
-     <li><h3><%= link_to "Découvre mes projets", projets_path %></h3></li>
-     <li><h3><%= link_to "Ma bibliothèque", livres_path %></h3></li>
-     <li><h3><%= link_to "Mes ressources", ressources_path %></h3></li>
-     <li><h3><%= link_to "Mes articles", articles_path %></h3></li>
-     <li><h3><%= link_to "Mes vidéos", videos_path %></h3></li>
+     <li><h4><%= link_to "Découvre mes projets", projets_path %></h4></li>
+     <li><h4><%= link_to "Ma bibliothèque", livres_path %></h4></li>
+     <li><h4><%= link_to "Mes ressources", ressources_path %></h4></li>
+     <li><h4><%= link_to "Mes articles", articles_path %></h4></li>
+     <li><h4><%= link_to "Mes vidéos", videos_path %></h4></li>
     </ul>
   </div>
   <!-- NOUVEAU FORM CALCUL -->
-  <div class="container">
+  <div class="container pb-3" style="background-color: grey">
     <h3 class="text-center" style="color: #54DD88">Estime directement l'impact de nôtre collaboration :</h3><br><br>
     <form>
       <div class="form-row align-items-center">
