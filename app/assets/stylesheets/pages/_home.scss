@@ -283,3 +283,39 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   #schema {
   }
 }
+
+// fin schema small
+
+
+// image schema_small
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  #schema_small {
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+  #schema_small {
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+  #schema_small {
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  #schema_small {
+    display: none;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  #schema_small {
+    display: none;
+  }
+}
