@@ -133,6 +133,44 @@ TxtType.prototype.tick = function() {
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #54DD88}";
         document.body.appendChild(css);
     };
+
+</script>
+
+<script>
+  // fonction pour animer les images
+
+
+$(document).ready(function() {
+
+  //move the image in pixel
+  var move = -15;
+
+  //zoom percentage, 1.2 =120%
+  var zoom = 1.2;
+
+  //On mouse over those thumbnail
+  $('.item').hover(function() {
+
+    //Set the width and height according to the zoom percentage
+    width = $('.item').width() * zoom;
+    height = $('.item').height() * zoom;
+
+    //Move and zoom the image
+    $(this).find('img').stop(false,true).animate({'width':width, 'height':height, 'top':move, 'left':move}, {duration:200});
+
+    //Display the caption
+    $(this).find('div.caption').stop(false,true).fadeIn(200);
+  },
+  function() {
+    //Reset the image
+    $(this).find('img').stop(false,true).animate({'width':$('.item').width(), 'height':$('.item').height(), 'top':'0', 'left':'0'}, {duration:100});
+
+    //Hide the caption
+    $(this).find('div.caption').stop(false,true).fadeOut(200);
+  });
+
+});
+
 </script>
 
 </header>
@@ -148,7 +186,7 @@ Quentin DELEGLISE
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <div class="container">
     <h1 id="green">J'apporte mes compétences techniques à votre projet !</h1>
-    <p id="green">Digitalisation, automatisation et scaling sans apport de trésorerie.</p>
+    <p id="green">Digitalisez, automatisatisez et scalez sans apport de trésorerie.</p>
     <div class="container">
       <div class="text-center">
         <!-- Typertext -->
@@ -273,7 +311,7 @@ Quentin DELEGLISE
         <img src="https://res.cloudinary.com/asfxgf/image/upload/v1592268524/samples/yeux_dmquy4.webp" alt="">
       </div>
       <div class="col-sm-8">
-        <p>Je pense que les entrepreneurs sont les personnes qui façonnent ce monde, et qu’elles méritent plus de <b>soutien</b>; de <b>reconnaissance</b> et de <b>sécurité</b> dans cet environnement imprévisible.Pour défendre cette cause, j’ai décidé d'accompagner des entrepreneurs et petites entreprises dans leur stratégie digitale.<br>Pour installer <b>une relation de confiance</b> et garantir les meilleurs résultats aux entreprises que j'accompagne, je ne me rémunère qu'en fonction du résultat que j'apporte.
+        <p>Je pense que les entrepreneurs sont les personnes qui façonnent ce monde, et qu’elles méritent plus de <b>soutien</b>; de <b>reconnaissance</b> et de <b>sécurité</b> dans cet environnement imprévisible.Pour défendre cette cause, j’ai décidé d'accompagner des entrepreneurs et petites entreprises dans leur stratégie digitale.<br>Pour installer <b>une relation de confiance</b> et garantir les meilleurs résultats, je ne me rémunère qu'en fonction du bénéfice que j'apporte.
         </p>
         <p>Ainsi <b>nous travaillons ensemble, avec des intérêts similaires</b> dans un environnement sain.
         </p>
@@ -292,40 +330,111 @@ Quentin DELEGLISE
         </p>
         <p>Mon diplôme de <a target="blank" href="https://www.lewagon.com/fr/paris/web-development-course/full-time">concepteur-développeur d'applications web"</a> (équivalent Bac+3/Bac+4) m'as permis de prendre conscience du nombre infini de solutions qu'apporte le web et la programmation.
         </p>
-        <p>Mais ce qui m'a le plus appris, ce sont <%= link_to "mes projets", projets_path, target: :_blank %>,<%= link_to "ma veille", ressources_path, target: :_blank %> et <%= link_to "mes lectures", livres_path, target: :_blank %></p>
+        <p>Mais ce qui m'a le plus appris, ce sont <%= link_to "mes projets", projets_path, target: :_blank %>,<%= link_to "ma veille", ressources_path, target: :_blank %> et <%= link_to "mes lectures.", livres_path, target: :_blank %></p>
       </div>
       <div class="col-sm-4">
         <img src="https://res.cloudinary.com/asfxgf/image/upload/v1592476485/education-removebg-preview_1_ey1udg.png" alt="">
       </div>
+      <!-- Section Exemples / outils -->
+      <div class="container text-center">
+        <h3 id="green">Quelques exemples de ce que je fait :</h3>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+          <ul>
+            <li>
+              <div class="item logo" id="slack">
+                <a href="#slack"><img src="https://res.cloudinary.com/asfxgf/image/upload/v1593106166/logos%20crm/slack_transparent_njywi7.png" alt="Slack" title="" width="125" height="125"/></a>
+                  <div class="caption">
+                    <a href="">Slack</a>
+                    <p>Super outil de communication et dashboard.</p>
+                  </div>
+              </div>
+           </li>
+           <li>
+              <div class="item logo">
+                <a href="#"><img src="https://res.cloudinary.com/asfxgf/image/upload/v1593109189/logos%20crm/imageonline-co-whitebackgroundremoved_4_se2tys.png" alt="Mailchimp" title="" width="125" height="125"/></a>
+                  <div class="caption">
+                    <a href="">Mailchimp</a>
+                    <p>Super outil pour designer et automatiser des campagnes de mailings.</p>
+                  </div>
+              </div>
+           </li>
+           <li>
+              <div class="item logo">
+                <a href="#"><img src="https://res.cloudinary.com/asfxgf/image/upload/v1593105236/logos%20crm/drive_pdwpl0.jpg" alt="Cycliner" title="" width="125" height="125"/></a>
+                  <div class="caption">
+                    <a href="">Drive</a>
+                    <p>Un outil monstrueux et gratuit : facturation, automatisation, tableaux croisés dynamiques et suivi.</p>
+                  </div>
+              </div>
+           </li>
+           <li>
+              <div class="item logo">
+                <a href="#"><img src="https://res.cloudinary.com/asfxgf/image/upload/v1593105055/logos%20crm/zapier_uns6ft.svg" alt="Cycliner" title="" width="125" height="125"/></a>
+                  <div class="caption">
+                    <a href="">Zapier</a>
+                    <p>Intuitif, peu-cher et rapide à utiliser, un trio gagnant.</p>
+                  </div>
+              </div>
+           </li>
+           <li>
+              <div class="item logo">
+                <a href="#"><img src="https://res.cloudinary.com/asfxgf/image/upload/v1593105055/logos%20crm/zapier_uns6ft.svg" alt="Cycliner" title="" width="125" height="125"/></a>
+                  <div class="caption">
+                    <a href="">Zapier</a>
+                    <p>Intuitif, peu-cher et rapide à utiliser, un trio gagnant.</p>
+                  </div>
+              </div>
+           </li>
+           <li>
+              <div class="item logo">
+                <a href="#"><img src="https://res.cloudinary.com/asfxgf/image/upload/v1593105055/logos%20crm/zapier_uns6ft.svg" alt="Cycliner" title="" width="125" height="125"/></a>
+                  <div class="caption">
+                    <a href="">Zapier</a>
+                    <p>Intuitif, peu-cher et rapide à utiliser, un trio gagnant.</p>
+                  </div>
+              </div>
+           </li>
+          </ul>
+        </div>
+          <div class="col-sm-8">
+            <ul>
+              <li>- Ecoute des problématiques et <b>conseil sur les outils les plus adaptés</b> à vos besoins.</li>
+            <li>- Elaboration et mise en place d’un <b>plan marketing</b>.</li>
+            <li>- Elaboration et mise en place d’un <b>plan de communication</b>.</li>
+            <li>- Elaboration et mise en place d’un <b>plan d'actions</b>.</li>
+            <li>- Réalisation de <b>sites ou apps webs</b> et <b>pages de ventes.</b></li>
+            <li>- Réalisation de <b>campagnes d’emailing</b>.</li>
+            <li>- Réalisation de <b>campagnes ADS (google / facebook / Instagram)</b>.</li>
+            <li>-<b>Prospection</b> automatisée (BtoB et BtoC).</li>
+            <li>- Automatisation des <u><abbr title="Tâches répétitives ou laborieuses">"Drudgery tasks"</abbr></u> ou <u><abbr title="Travail que l'on peux effectuer sans réfléchir">"Donkey Work".</abbr></u>
+            </li><!-- CSS/JS afficher les 2 mots en "surbrillance pour les faire mieux apparaitre -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+      <!--Fin test -->
+
+
+      <!-- Section How-->
       <div class="container text-center" id="green">
          <h2>Comment ça marche ?</h2>
       </div>
       <div class="container text-center">
+        <div>
          <img class="img-responsive" id="schema" src="https://res.cloudinary.com/asfxgf/image/upload/v1593101064/schema_a_modifier_2_jj3eku.png" alt="Schéma fonctionnement">
+        </div>
+        <div>
          <img class="img-responsive" id="schema_small" src="https://res.cloudinary.com/asfxgf/image/upload/v1593102772/schema_fini_1_qpwoum.png" alt="Schéma fonctionnement">
+        </div>
       </div>
-    </div>
-      <div class="container">
-        <ol>
-          <li>Un premier appel pour faire connaissance, comprendre tes problèmatiques et objectifs.</li>
-          <li>Un autre entretien pour définir un plan d'action et un mode de rémunération (tarification au résultat ou à l'heure).</li>
-          <li>Mise en place du plan d'action, suivi et ajustements.</li>
-          <li>Debriefing sur les résultats.</li>
-        </ol>
-      </div>
-      <h3 id="green">Quelques exemples de ce que je fait :</h3>
-      <ul>
-        <li>- Ecoute des problématiques et <b>conseil sur les outils les plus adaptés</b> à vos besoins.</li>
-        <li>- Elaboration et mise en place d’un <b>plan marketing</b>.</li>
-        <li>- Elaboration et mise en place d’un <b>plan de communication</b>.</li>
-        <li>- Elaboration et mise en place d’un <b>plan d'actions</b>.</li>
-        <li>- Réalisation de <b>sites ou apps webs</b> et <b>pages de ventes.</b></li>
-        <li>- Réalisation de <b>campagnes d’emailing</b>.</li>
-        <li>- Réalisation de <b>campagnes ADS (google / facebook / Instagram)</b>.</li>
-        <li>-<b>Prospection</b> automatisée (BtoB et BtoC).</li>
-        <li>- Automatisation des <u><abbr title="Tâches répétitives ou laborieuses">"Drudgery tasks"</abbr></u> ou <u><abbr title="Travail que l'on peux effectuer sans réfléchir">"Donkey Work".</abbr></u>
-        </li><!-- CSS/JS afficher les 2 mots en "surbrillance pour les faire mieux apparaitre -->
-      </ul>
     </div>
   </div>
   <div class="container text-center">
@@ -334,13 +443,13 @@ Quentin DELEGLISE
     <!-- Début de widget de lien Calendly -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-<a class="btn btn-flat" href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quentin-deleglise'});return false;">Discutons de vos problématiques</a>
+<a class="btn btn-flat" href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/quentin-deleglise'});return false;">Discutons de tes problématiques</a>
 <!-- Fin de widget de lien Calendly -->
   <!--Mettre un emoji love / message-->
     </p>
   </div>
   <div class="container col-sm-6 text-center">
-    <h3 id="green">Envie d'en savoir plus sur moi ?</h3>
+    <h3 id="green">Tu as envie d'en savoir plus sur moi ?</h3>
     <ul>
      <li><h4><%= link_to "Découvre mes projets", projets_path %></h4></li>
      <li><h4><%= link_to "Ma bibliothèque", livres_path %></h4></li>
