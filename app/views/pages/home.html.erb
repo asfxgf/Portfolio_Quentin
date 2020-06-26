@@ -196,7 +196,7 @@ Quentin DELEGLISE
         <div class="row">
           <div class="col-sm-12 text-center" >
             <h2 id="green">Je crée pour vous :</h2>
-            <h2  id="writter" class="typewrite" data-period="2000" data-type= '[ "Sites et apps web.", "Landing page.","Campagnes mailing.", "Campagnes ads (google/fb/insta/linkedin etc...)", "Contenu (web, vidéo, photographie ...)", "Processus automatisés (à peu près tout)" ]'>
+            <h2  id="writter" class="typewrite" data-period="2000" data-type= '[ "Sites et apps web.", "Landing page.","Campagnes mailing.", "Campagnes ads (google/fb/insta/linkedin etc...)", "Contenu (web, vidéo, photographie ...)", "Processus automatisés" ]'>
             <span class="wrap">Tout pour votre réussite</span>
             </h2>
           </div>
@@ -224,7 +224,7 @@ Quentin DELEGLISE
       <div class="cardss">
 
         <div class="cardss-image">
-          <img src="https://res.cloudinary.com/asfxgf/image/upload/c_scale,h_450/v1592318108/Quentin_DELEGLISE_photo_1_bixsah.png" alt="Quentin DELEGLISE">
+          <img src="https://res.cloudinary.com/asfxgf/image/upload/c_scale,h_450/v1593199457/quentin_wagon_trois_jxsvtu.png" alt="Quentin DELEGLISE">
         </div>
 
       <ul class="social-icons">
@@ -261,6 +261,7 @@ Quentin DELEGLISE
       </div>
       <div class="col-sm-12 col-md-12 col-lg-6 mx-auto">
         <div class="allprogressbar pt-6">
+          <h3 class="text-center">Mes acquis :</h3>
           <!-- activer les 2 dernières barres de progression pour montrer que je bosse dessus-->
           <h4>Automatisation :</h4>
           <div class="progress">
@@ -483,19 +484,17 @@ Quentin DELEGLISE
   </div>
   <div class="container">
     <h3 id="green" class="mx-auto text-center">En savoir plus :</h3>
-    <div class="form-row">
-    <div class="col-sm-5 col-md-5">
-    </div>
-    <div class="col-sm-7 col-md-7">
-    <ul>
-      <h4><%= link_to "- Mes projets", projets_path %></h4>
-      <h4><%= link_to "- Bibliothèque", livres_path %></h4>
-      <h4><%= link_to "- Mes ressources", ressources_path %></h4>
-      <h4><%= link_to "- Mes articles", articles_path %></h4>
-      <h4><%= link_to "- Mes vidéos", videos_path %></h4>
+    <br>
+    <ul class="list-inline text-center d-flex justify-content-around align-items-center">
+      <h4><%= link_to "Mes projets", projets_path %></h4>
+      <h4><%= link_to "Bibliothèque", livres_path %></h4>
+      <h4><%= link_to "Mes ressources", ressources_path %></h4>
+      <h4><%= link_to "Mes articles", articles_path %></h4>
+      <h4><%= link_to "Mes vidéos", videos_path %></h4>
     </ul>
   </div>
-  </div>
+
+
   <!-- NOUVEAU FORM CALCUL -->
   <div class="container pb-3" style="background-color: grey">
     <h3 class="text-center" style="color: #54DD88">Simulation de l'impact de notre collaboration :</h3><br><br>
@@ -591,5 +590,22 @@ Quentin DELEGLISE
    <input type="number" class="form-control text-center mt-3" id="gains" value="0" disabled="disabled">
    </input>
 </form>
+</div>
+
+<!--TEST -->
+
+
+  <div class="container">
+    <h3 id="green" class="mx-auto text-center">En savoir plus :</h3>
+  </div>
+  <div class="container">
+    <div class="row">
+    <ul class="list-inline text-center d-flex justify-content-around align-items-center">
+      <h4 class="col-sm-3"><%= link_to "Projets", projets_path, class: "btn btn-flat pulse-button" %></h4>
+      <h4 class="col-sm-3"><%= link_to "Bibliothèque", livres_path, class: "btn btn-flat pulse-button" %></h4>
+      <h4 class="col-sm-3"><%= link_to "Articles", articles_path, class: "btn btn-flat pulse-button" %></h4>
+      <h4 class="col-sm-3"><%= link_to "Vidéos", videos_path, class: "btn btn-flat pulse-button" %></h4>
+    </ul>
+  </div>
 </div>
 </body>
