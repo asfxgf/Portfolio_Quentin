@@ -319,9 +319,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     display: none;
   }
 }
-
-
-
 // tenta animer item
 
 
@@ -365,7 +362,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 .item .caption a {
   text-decoration:none;
-  color:#0cc7dd;
+  color: #54DD88;
   font-size:16px;
 
   /* add spacing and make the whole row clickable*/
@@ -376,7 +373,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .item .caption p {
   padding:5px;
   margin:0;
-  font-size:10px;
+  font-size:12px;
 }
 
 .logo img {
