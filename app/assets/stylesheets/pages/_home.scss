@@ -12,6 +12,12 @@ a {
   color: #54DD88;
 }
 
+.colonne-centree
+{
+float: none;
+margin: 0 auto;
+}
+
 .thearrow {
   color: #54DD88;
   margin-top: 35px;
@@ -386,3 +392,38 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   clear:both;
 }
 
+
+// imgmarketing id
+
+@media (min-width: 100px) and (max-width: 575px) {
+  #imgmarketing {
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+  #imgmarketing {
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+  #imgmarketing {
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  #imgmarketing {
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  #imgmarketing {
+  }
+}
+
+
+#missions {
+}
