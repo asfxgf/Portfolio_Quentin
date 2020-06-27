@@ -10,7 +10,7 @@ class ProjetPolicy < ApplicationPolicy
   end
 
   def show?
-    false # Aucun user ne peux voir la show des articles
+    admin? # seul les admins peuvent creer un projet
   end
 
   def update?
