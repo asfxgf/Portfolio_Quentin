@@ -10,7 +10,7 @@ class ProjetPolicy < ApplicationPolicy
   end
 
   def show?
-    admin? # seul les admins peuvent creer un projet
+    member? || admin? # seuls les membres et les admins peuvent voir un projet au complet
   end
 
   def update?
@@ -31,5 +31,9 @@ class ProjetPolicy < ApplicationPolicy
 
   def admin?
     user&.admin
+  end
+
+  def member?
+    user&.member
   end
 end

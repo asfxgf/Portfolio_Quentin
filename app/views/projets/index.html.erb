@@ -6,9 +6,9 @@
 </div>
 <div class="container">
 <% @projets.each do |projet| %>
-<a target="_blank" href="<%= projet.url %>">
+<%= link_to projet_path(projet) do %>
 <div class="card-trip">
-  <img src="<%= projet.picture %>" />
+  <img src="<%= projet.background_picture %>" />
   <div class="card-trip-infos">
     <div>
       <h2><%= projet.title %></h2>
@@ -22,7 +22,7 @@
     </div>
   </div>
 </div>
-</a>
+<% end %>
 <% end %>
 
 <p><%= link_to "Retour Accueil", root_path %></p>

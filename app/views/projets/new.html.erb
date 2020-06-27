@@ -8,11 +8,23 @@
   <%= f.label :description, "Entrez une description" %>
   <%= f.text_field :description %>
 
-  <%= f.label :url, "Entrez l'url du site / projet" %>
-  <%= f.text_field :url %>
+  <%= f.label :url_projet, "Entrez l'url du projet" %>
+  <%= f.text_field :url_projet %>
 
-  <%= f.label :picture, "Entrez l'url d'une illustration du projet" %>
-  <%= f.text_field :picture %>
+  <%= f.label :background_picture, "Entrez l'image de fond d'écran du projet" %>
+  <%= f.text_field :background_picture %>
+
+  <%= f.label :text, "Entrez le texte qui décrit le projet (Why How What)" %>
+  <%= f.text_field :text %>
+
+  <%= f.label :picture_1, "Entrez le lien de la photo 1" %>
+  <%= f.text_field :picture_1 %>
+
+  <%= f.label :picture_2, "Entrez le lien de la photo 2" %>
+  <%= f.text_field :picture_2 %>
+
+  <%= f.label :picture_3, "Entrez le lien de la photo 3" %>
+  <%= f.text_field :picture_3 %>
 
   <%= f.submit %>
 <% end %>
