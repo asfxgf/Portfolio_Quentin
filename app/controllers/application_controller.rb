@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   def user_not_authorized
     flash[:alert] = "Seules les personnes connectées peuvent accéder aux projets"
-    redirect_to(projets_path)
+    redirect_to(user_session_path)
   end
 
   private
