@@ -349,9 +349,9 @@ Quentin DELEGLISE
       <div class="container">
         <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-6 text-center">
-          <img id="imgmarketing" src="https://res.cloudinary.com/asfxgf/image/upload/v1593129573/imageonline-co-whitebackgroundremoved_10_uy3srg.png" alt="marketing">
+          <img src="https://res.cloudinary.com/asfxgf/image/upload/v1593129573/imageonline-co-whitebackgroundremoved_10_uy3srg.png" alt="marketing">
         </div>
-          <div id="missions" class="col-sm-12 col-md-12 col-lg-6 mx-auto">
+          <div class="col-sm-12 col-md-12 col-lg-6 mx-auto">
             <br>
             <ul>
               <li>- <b>Conseil sur les outils</b> les plus adaptés.</li>
@@ -484,14 +484,16 @@ Quentin DELEGLISE
   </div>
   <div class="container">
     <h3 id="green" class="mx-auto text-center">En savoir plus :</h3>
-    <br>
-    <ul class="list-inline text-center d-flex justify-content-around align-items-center">
-      <h4><%= link_to "Mes projets", projets_path %></h4>
-      <h4><%= link_to "Bibliothèque", livres_path %></h4>
-      <h4><%= link_to "Mes ressources", ressources_path %></h4>
-      <h4><%= link_to "Mes articles", articles_path %></h4>
-      <h4><%= link_to "Mes vidéos", videos_path %></h4>
-    </ul>
+  </div>
+  <div class="container">
+    <div class="wrapper text-center">
+      <%= link_to "Projets", projets_path, :class=>"btn btn-flat" %>
+      <%= link_to "Articles", articles_path, :class=>"btn btn-flat" %>
+      <%= link_to "Videos", videos_path, :class=>"btn btn-flat" %>
+      <%= link_to "Ressources", ressources_path, :class=>"btn btn-flat" %>
+      <%= link_to "Bibliothèque", livres_path, :class=>"btn btn-flat" %>
+      <a href="https://github.com/asfxgf" target="_blank" class="btn btn-flat">Github</a>
+    </div>
   </div>
 
 
