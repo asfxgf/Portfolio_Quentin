@@ -9,4 +9,7 @@ class Projet < ApplicationRecord
   validates :picture_1, presence: true
   validates :picture_2, presence: true
   validates :picture_3, presence: true
+  validates :picture_comment_1, presence: true
+  validates :picture_comment_2, presence: true
+  validates :picture_comment_3, presence: true
 end

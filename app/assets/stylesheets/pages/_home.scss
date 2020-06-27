@@ -392,43 +392,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   clear:both;
 }
 
-/*
-@media (min-width: 100px) and (max-width: 575px) {
-  #liste-horizontal{
-    display: none;
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767px) {
-  #liste-horizontal {
-    display: none;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991px) {
-  #liste-horizontal {
-    display: none;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  #liste-horizontal {
-    display: inline;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  #liste-horizontal {
-    display: inline;
-  }
-}
-
-*/
-
 @media (min-width: 100px) and (max-width: 575px) {
   .wrapper {
     display: grid;

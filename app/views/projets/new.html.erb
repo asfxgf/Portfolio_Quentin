@@ -1,30 +1,40 @@
-<h1>Créer ton nouveau projet !</h1>
+<div class="container">
+<h1>Créer un nouveau projet</h1>
 
-<%= form_for @projet do |f| %>
+<%= simple_form_for @projet do |f| %>
 
-  <%= f.label :title, "Entrez le titre" %>
-  <%= f.text_field :title %>
+  <%= f.input :title %>
 
-  <%= f.label :description, "Entrez une description" %>
-  <%= f.text_field :description %>
+  <%= f.input :description %>
 
-  <%= f.label :url_projet, "Entrez l'url du projet" %>
-  <%= f.text_field :url_projet %>
+  <%= f.input :url_projet %>
 
-  <%= f.label :background_picture, "Entrez l'image de fond d'écran du projet" %>
-  <%= f.text_field :background_picture %>
+  <%= f.input :background_picture %>
 
-  <%= f.label :text, "Entrez le texte qui décrit le projet (Why How What)" %>
-  <%= f.text_field :text %>
-
-  <%= f.label :picture_1, "Entrez le lien de la photo 1" %>
-  <%= f.text_field :picture_1 %>
-
-  <%= f.label :picture_2, "Entrez le lien de la photo 2" %>
-  <%= f.text_field :picture_2 %>
-
-  <%= f.label :picture_3, "Entrez le lien de la photo 3" %>
-  <%= f.text_field :picture_3 %>
-
-  <%= f.submit %>
-<% end %>
+  <%= f.input :text %>
+</div>
+<div class="container">
+  <div class="row">
+    <h1> Attention : Garder de grandes photos, et les dimenssionner pareil #cloudinary</h1>
+    <div class="col-sm-6">
+      <%= f.input :picture_1 %>
+    </div>
+    <div class="col-sm-6">
+      <%= f.input :picture_comment_1 %>
+    </div>
+    <div class="col-sm-6">
+      <%= f.input :picture_2 %>
+    </div>
+    <div class="col-sm-6">
+      <%= f.input :picture_comment_2 %>
+    </div>
+    <div class="col-sm-6">
+      <%= f.input :picture_3 %>
+    </div>
+    <div class="col-sm-6">
+      <%= f.input :picture_comment_3 %>
+    </div>
+    <%= f.submit %>
+    <% end %>
+  </div>
+</div>
