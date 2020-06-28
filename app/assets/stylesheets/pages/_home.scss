@@ -15,8 +15,13 @@ ul {
 }
 
 a {
-  color: #54DD88;
+  color: #4abf75;
 }
+
+h2 {
+  font-weight: bold;
+}
+
 
 .colonne-centree
 {
@@ -25,19 +30,19 @@ margin: 0 auto;
 }
 
 .thearrow {
-  color: #54DD88;
+  color: #4abf75;
   margin-top: 35px;
 }
 
 #visions {
-  color: #54DD88;
+  color: #4abf75;
 }
 
 #green {
-  color: #54DD88;
+  color: #4abf75;
 }
 #writter {
-  color: #54DD88;
+  color: #4abf75;
 }
 .competences {
 
@@ -337,7 +342,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .item {
   width:125px;
   height:125px;
-  border:2px solid #54DD88;
+  border:2px solid #4abf75;
   margin:5px 5px 5px 0;
 
   /* required to hide the image after resized */
