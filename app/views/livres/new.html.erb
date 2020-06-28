@@ -1,19 +1,17 @@
-<%= form_for @livre do |f| %>
+<div class="container">
+  <%= simple_form_for @livre do |f| %>
+    <%= f.input :title %>
 
-  <%= f.label :title, "Entrer le titre" %>
-  <%= f.text_field :title %>
+    <%= f.input :description %>
 
-  <%= f.label :description, "Entrer la description" %>
-  <%= f.text_field :description %>
+    <%= f.input :author %>
 
-  <%= f.label :author, "Entrer le nom de l'auteur" %>
-  <%= f.text_field :author %>
+    <%= f.input :url %>
 
-  <%= f.label :url, "Entrer l'url amazon" %>
-  <%= f.text_field :url %>
+    <%= f.input :picture %>
 
-  <%= f.label :picture, "Entrer l'url de la photo" %>
-  <%= f.text_field :picture %>
-
-  <%= f.submit %>
+    <div class="btn-flat text-center">
+      <%= f.button :submit %>
+    </div>
+</div>
 <% end %>
