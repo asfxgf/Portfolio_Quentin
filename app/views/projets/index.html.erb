@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 id="green">Tous mes projets</h1>
+  <h1 id="green">Tous mes projets :</h1>
   <% if policy(Article).create? %>
     <%= link_to "Ajouter un projet", new_projet_path, class: "btn btn-flat" %>
   <% end %>
@@ -25,6 +25,6 @@
 <% end %>
 <% end %>
 
-<p><%= link_to "Retour Accueil", root_path %></p>
+<%= link_to "Retour Accueil", root_path, :class=>"btn btn-flat" %>
 </div>
 
