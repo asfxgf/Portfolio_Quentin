@@ -1,5 +1,9 @@
 <div class="container">
-  <h1 id="green">Les videos index</h1>
+  <h1 id="green">Mes videos :</h1>
+
+  <h3 id="green">J'ai pas encore upload mes vidéos, en attendant voici quelques pépites :</h3>
+
+
   <% if policy(Video).create? %>
     <%= link_to "Ajouter une vidéo", new_video_path, class: "btn btn-flat" %>
   <% end %>
