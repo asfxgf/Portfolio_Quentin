@@ -12,7 +12,7 @@
   <div class="card-trip-infos">
     <div>
       <h2 id="green"><%= projet.title %></h2>
-      <p id="green"><strong><%= projet.description %><strong></p>
+      <h2 id="green"><strong><%= projet.description %><strong></p>
       <% if policy(projet).edit? %>
         <p><%= link_to 'Edit', edit_projet_path(projet) %></p>
       <% end %>
