@@ -16,7 +16,7 @@
   <div class="card-trip-infos">
     <div>
       <h2><%= article.title %></h2>
-      <p><%= article.description %></p>
+      <p><strong><%= article.description %></strong></p>
       <% if policy(article).edit? %>
       <p><%= link_to 'Edit', edit_article_path(article) %></p>
       <% end %>
@@ -30,5 +30,5 @@
 </a>
 <% end %>
 
-<%= link_to "Retour Accueil", root_path, :class=>"btn btn-flat" %>
+<%= link_to "Retour Accueil", root_path, :class=>"btn btn-flat", :style=>'color:#000000;' %>
 </div>
