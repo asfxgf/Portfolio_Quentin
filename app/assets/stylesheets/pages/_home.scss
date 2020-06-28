@@ -1,10 +1,5 @@
 // Specific CSS for your home-page
 
-p {
-  font-size: 20px;
-}
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -282,8 +277,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     display: none;
   }
   li {
-  font-size: 20px;
-}
+    font-size: 20px;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -305,9 +300,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     display: none;
   }
   li {
-    font-size: 20px;
-  }
-  p {
     font-size: 20px;
   }
 }
