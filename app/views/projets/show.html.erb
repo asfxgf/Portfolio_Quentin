@@ -8,12 +8,12 @@
   </div>
   <br>
   <div>
-    <h2><a href="<%= @projet.url_projet %>" target="_blank" class="btn btn-flat">Voir le projet</a></h2>
+    <h2><a href="<%= @projet.url_projet %>" target="_blank" class="btn btn-flat" style="color: black">Voir le projet</a></h2>
   </div>
 </div>
 <div class="container">
   <br>
-  <h1><u>Explication du projet :</u></h1>
+  <h1 id="green"><u>Explication du projet :</u></h1>
   <br>
   <p><%= @projet.text %></p>
 </div>
@@ -63,5 +63,5 @@
 </div>
 </div>
 <div class="container">
-  <%= link_to "Retour à la liste des projets", projets_path, :class=>"btn btn-flat" %>
+  <%= link_to "Retour à la liste des projets", projets_path, :class=>"btn btn-flat", :style=>"color:black" %>
 </div>
