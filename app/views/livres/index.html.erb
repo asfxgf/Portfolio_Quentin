@@ -1,15 +1,13 @@
 <div class="container">
   <h1 id="green">Binvenue dans ma bibliothèque :</h1>
-    <% if policy(Livre).create? %>
-      <%= link_to "Ajouter un livre à la bibliothèque", new_livre_path, class: "btn btn-flat" %>
-    <% end %>
+  <% if policy(Livre).create? %>
+    <%= link_to "Ajouter un livre à la bibliothèque", new_livre_path, class: "btn btn-flat" %>
+  <% end %>
 </div>
-
-
 <div class="container">
   <div class="cards">
     <%@livres.each do |livre| %>
-      <div class="card" style="width: 40rem height: 40rem;">
+      <div class="card" style="width: 18rem";>
         <img class="card-img-top" src="<%= livre.picture %>" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title"><%= livre.title %></h5>
