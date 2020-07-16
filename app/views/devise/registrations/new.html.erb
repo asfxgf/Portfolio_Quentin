@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-4 offset-4">
 
-<h2>Sign up :</h2>
+<h2>S'inscrire :</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -11,18 +11,24 @@
     <%= f.input :email,
                 required: true,
                 autofocus: true,
+                label: "Email :",
+                placeholder: "john.doe@hotmail.fr :",
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
                 required: true,
+                label: "Mot de passe :",
+                placeholder: "6 caractères minimum :",
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
                 required: true,
+                label: "Confirmer le mot de passe :",
+                placeholder: "6 caractères minimum :",
                 input_html: { autocomplete: "new-password" } %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up", class: "btn btn-flat" %>
+    <%= f.button :submit, "S'inscrire", class: "btn btn-flat" %>
   </div>
 <% end %>
 
