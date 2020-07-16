@@ -76,7 +76,6 @@ alert('Les valeurs introduites ne sont pas des nombres');
 function testInt(value) {
 return value == parseInt(value);
 }
-
 </script>
 
 <script>
@@ -117,6 +116,10 @@ $(document).ready(function() {
 
 </script>
 
+<!-- Typed.js (le vrai)-->
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
 </header>
 <!--
 Coucou petit coquin ! Bienvenue sur mon site, reste autant que tu voudras, mais n'oublie pas de m'informer si tu découvre des bugs ! //////////////////
@@ -138,7 +141,27 @@ Quentin DELEGLISE
           <div class="col-sm-12 text-center" >
             <h2 id="green">Je crée pour vous :</h2>
             <h2  id="writter" class="typewrite" data-period="2000" data-type= '[ "Sites et apps web.", "Landing page.","Campagnes mailing.", "Campagnes ads (google/fb/insta/linkedin etc...)", "Contenu (web, vidéo, photographie ...)", "Processus automatisés" ]'>
-            <span class="wrap">Tout pour votre réussite</span>
+            <div id="typed-strings">
+          </div>
+            <span id="typed"></span>
+            <script>
+              var typed = new Typed('#typed', {
+              strings: '#typed-strings',
+              strings: [
+              'Sites et apps web.',
+              'Landing page.',
+              'Campagnes mailing.',
+              'Campagnes ads (google/fb/insta/linkedin etc...)',
+              'Contenu (web, vidéo, photographie ...).',
+              'Processus automatisés.',
+              ],
+              typeSpeed: 30,
+              backSpeed: 15,
+              smartBackspace: true,
+              backDelay: 1000,
+              loop: true,
+              });
+            </script>
             </h2>
           </div>
         </div>
