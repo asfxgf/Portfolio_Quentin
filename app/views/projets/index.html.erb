@@ -8,7 +8,7 @@
 <% @projets.each do |projet| %>
 <%= link_to projet_path(projet) do %>
 <div class="card-trip">
-  <img src="<%= projet.background_picture %>" />
+  <img  class="img-card" src="<%= projet.background_picture %>" />
   <div class="card-trip-infos">
     <div>
       <h2 id="green"><%= projet.title %></h2>

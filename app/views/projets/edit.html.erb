@@ -1,18 +1,45 @@
 <h1>Une modification à apporter ?</h1>
-
-<%= form_for @projet do |f| %>
-
-  <%= f.label :title, "Entrer le titre" %>
-  <%= f.text_field :title %>
-
-  <%= f.label :description, "Entrer la description" %>
-  <%= f.text_field :description %>
-
-  <%= f.label :url, "Entrer l'url" %>
-  <%= f.text_field :url %>
-
-  <%= f.label :picture, "Entrer l'url d'une photo qui représente le projet" %>
-  <%= f.text_field :picture %>
-
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <%= form_for @projet do |f| %>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= f.label :title, "Entrer le titre" %>
+    </div>
+    <div class="col-sm-6">
+      <%= f.text_field :title %>
+    </div>
+    <div class="col-sm-6">
+      <%= f.label :description, "Entrer la description" %>
+    </div>
+    <div class="col-sm-6">
+      <%= f.text_field :description %>
+    </div>
+    <div class="col-sm-6">
+    <%= f.label :url_projet, "Entrer l'url" %>
+    </div>
+    <div class="col-sm-6">
+    <%= f.text_field :url_projet %>
+    </div>
+    <div class="col-sm-6">
+    <%= f.label :picture_1, "Entrer l'url d'une photo qui représente le projet" %>
+    </div>
+    <div class="col-sm-6">
+    <%= f.text_field :picture_1 %>
+    </div>
+    <div class="col-sm-6">
+    <%= f.label :picture_2, "Entrer l'url d'une photo qui représente le projet" %>
+    </div>
+    <div class="col-sm-6">
+    <%= f.text_field :picture_2 %>
+    </div>
+    <div class="col-sm-6">
+    <%= f.label :picture_3, "Entrer l'url d'une photo qui représente le projet" %>
+    </div>
+    <div class="col-sm-6">
+    <%= f.text_field :picture_3 %>
+    </div>
+    <div class="col-sm-6">
+    <%= f.submit %>
+  </div>
+  <% end %>
+</div>
