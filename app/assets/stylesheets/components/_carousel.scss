@@ -26,3 +26,12 @@
   .carousel {
   }
 }
+
+
+.resized img {
+  width: 40rem;
+  height: 40rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
