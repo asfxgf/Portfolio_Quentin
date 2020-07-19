@@ -10,7 +10,7 @@ class ProjetPolicy < ApplicationPolicy
   end
 
   def show?
-    member? || admin? # seuls les membres et les admins peuvent voir un projet au complet
+    true # seuls les membres et les admins peuvent voir un projet au complet
   end
 
   def update?
